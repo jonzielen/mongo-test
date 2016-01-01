@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
 
 var db = require('./app/db');
 
@@ -17,8 +16,8 @@ var app = express();
 // Connect to Mongo on start
 db.connect('mongodb://localhost:27017/test', function(err) {
   if (err) {
-    console.log('Unable to connect to Mongo.')
-    process.exit(1)
+    console.log('Unable to connect to Mongo.');
+    process.exit(1);
   }
 });
 
